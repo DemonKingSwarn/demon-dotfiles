@@ -1,5 +1,0 @@
-#!/bin/sh
-
-chosen=$(cat ~/.scripts/data/Aunicode | dmenu -i)
-[ -z "$chosen" ] && exit
-echo $chosen | awk '{split($0, a, "-"); print a[2]}' | xclip -selection clipboard
