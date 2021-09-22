@@ -101,8 +101,8 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
+set $ws1 "1: ✉"
+set $ws2 "2: >_"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
@@ -256,5 +256,7 @@ bindsym $mod+p exec ~/passmenu
 # Polybar launch script
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-
+# Assign programs to workspaces
+for_window [class="Firefox"] move to workspace $ws1
+for_window [class="Gnome-terminal"] move to workspace $ws2
 
