@@ -188,7 +188,12 @@ hide_edge_borders both
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+        status_command ~/bumblebee-status/bumblebee-status \
+                -m battery memory date time \
+                pasink pasource \
+                -p time.format="%H:%M:%S" \
+                -t iceberg-rainbow \
+
 	position top
 	colors {
 		background $bg-color
@@ -230,6 +235,26 @@ exec_always compton -f
 bindsym $mod+shift+i exec ~/Development/splatmoji/splatmoji copy
 
 # Display wallpaper
-exec_always feh --bg-fill ~/Pictures/background.webp
+exec_always feh --bg-fill ~/Pictures/nordic-wallpapers/wallpapers/ign_about_to_die.png
+
+# configuring dunst
+exec --no-startup-id dunst -c ~/.config/dunst/dunstrc
+
+# kaju emojis and gifs
+bindsym $mod+i exec ~/dotfiles-2/.scripts/bin/customemoji
+bindsym $mod+g exec ~/dotfiles-2/.scripts/bin/customgif
+
+# screen saver
+exec --no-startup-id xss-lock -l ~/dotfiles/.scripts/lock.sh
+
+# startup script
+exec --no-startup-id ~/.config/startup.sh
+
+# passmenu
+bindsym $mod+p exec ~/passmenu
+
+# Polybar launch script
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 
 
