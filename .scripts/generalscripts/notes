@@ -1,4 +1,0 @@
-#!/bin/sh
-
-dir=~/Files/Quran/Notes
-rofi -show file-browser-extended -file-browser-dir "$dir" -file-browser-hide-parent -file-browser-cmd zathura -file-browser-exclude '*.org' -file-browser-exclude '*.tex'
