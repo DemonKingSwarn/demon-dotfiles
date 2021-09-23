@@ -1,0 +1,9 @@
+#!/bin/sh
+
+chosen=$(rofi -show file-browser-extended -file-browser-dir ~/Files/Emojis -file-browser-cmd echo -file-browser-hide-parent -show-icons)
+[ -z "$chosen" ] && exit
+
+xclip -selection clipboard -t image/png -i $chosen
+xdotool key ctrl+v
+sleep 0.15
+xdotool key Return

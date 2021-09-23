@@ -1,0 +1,10 @@
+#!/bin/sh
+
+chosen="$(ls ~/cashew/emojis -1 | rev | cut -b 5- | rev | rofi -dmenu -matching normal -show-icons -i -p 'Emojis')"
+chosen=$(echo $chosen | sed "s/\/home\/cashew\/emojis\///" | sed "s/\.png//")
+
+[ -z "$chosen" ] && exit
+printf "https://raw.githubusercontent.com/DemonKingSwarn/emojis/main/$chosen.png" | xclip -selection clipboard
+xdotool key ctrl+v
+sleep 0.15
+xdotool key Return

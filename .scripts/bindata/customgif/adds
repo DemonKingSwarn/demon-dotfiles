@@ -1,0 +1,21 @@
+#!/usr/bin/python
+
+import os
+import sys
+from subprocess import call
+
+pwd = os.getcwd()
+
+fhand = open(os.path.join(pwd,sys.argv[1]))
+fread = fhand.readlines()
+
+path = os.path.join(pwd, f'get_{sys.argv[1]}')
+
+if not os.path.exists(path):
+    os.mkdir(path)
+
+for i in range(len(fread)):
+
+    fitem = (fread[i][:-1])
+
+    call(f'wget {fitem} -O {path}/{i}.gif', shell=True)

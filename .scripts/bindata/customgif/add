@@ -1,0 +1,14 @@
+#!/usr/bin/python
+
+from pathlib import Path
+from subprocess import call
+from sys import argv
+
+home = Path.home()
+pwd = f'{home}/cashew/GIFs'
+
+print(argv)
+
+call(f"wget {argv[1]} -O {pwd}/{argv[2]}.gif",shell=True)
+call("customgif resize", cwd=pwd, shell=True)
+call("customgif set",shell=True)

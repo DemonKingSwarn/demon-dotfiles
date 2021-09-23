@@ -1,0 +1,36 @@
+#!/usr/bin/python
+
+import os
+import json
+
+# Get list of emojis aka super complex code I pasted from stack
+from subprocess import Popen, PIPE
+p = Popen(['customemoji', 'list'], stdin=PIPE, stdout=PIPE, stderr=PIPE)
+emojisdata, err = p.communicate()
+emojisdata = emojisdata.decode().split('\n')
+emojisdata.remove('')
+
+home = os.path.expanduser('~')
+configpath = os.path.join(home, '.config/espanso/custom/emojis.json')
+configdata = [] 
+
+for emoji in emojisdata:
+	configdata.append([f'.{emoji}.', f'https://gitlab.com/thecashewtrader/emojis/-/raw/main/{emoji}.png'])
+
+with open(configpath, "w") as configfile:
+	configfile.write(json.dumps(configdata))
+
+customdir = os.path.join(home, '.config/espanso/custom')
+configpath = os.path.join(home, '.config/espanso/default.yml')
+configdata = ['matches:\n']
+customfiles = os.listdir(customdir)
+
+for customfile in customfiles:
+	with open(os.path.join(customdir, customfile)) as file:
+		customjson = json.loads(file.read())
+		for pair in customjson:
+			configdata.append(f'- trigger: "{pair[0]}"\n')
+			configdata.append(f'  replace: "{pair[1]}"\n')
+
+with open(configpath, 'w') as conf:
+	conf.writelines(configdata)

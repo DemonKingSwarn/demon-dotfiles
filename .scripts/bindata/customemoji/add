@@ -1,0 +1,14 @@
+#!/usr/bin/python
+
+from sys import argv
+from pathlib import Path
+from subprocess import call
+
+home = Path.home()
+pwd = f'{home}/cashew/Emojis'
+
+print(argv)
+
+call(f"wget {argv[1]} -O {pwd}/{argv[2]}.png",shell=True)
+call("customemoji resize", cwd=pwd, shell=True)
+call("customemoji set",shell=True)
