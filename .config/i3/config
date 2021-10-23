@@ -252,11 +252,25 @@ exec --no-startup-id ~/.config/startup.sh
 
 # passmenu
 bindsym $mod+p exec ~/passmenu
-
-# Polybar launch script
-# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
+ # translator
+ bindsym $mod+t exec ~/.scripts/translator
+  
+ # Unicode
+ bindsym $mod+u exec ~/.scripts/unicode/unicode 
+ # bookmarks
+bindsym $mod+b exec ~/.scripts/bookmarks/bookmarks
+ 
+ # Polybar launch script
+ # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+ 
 # Assign programs to workspaces
 for_window [class="Firefox"] move to workspace $ws1
 for_window [class="Gnome-terminal"] move to workspace $ws2
+ 
+# floating
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Gnome-calculator"] floating enable
+for_window [class="Pcmanfm"] floating enable
+for_window [class="Thunar"] floating enable
+
 
