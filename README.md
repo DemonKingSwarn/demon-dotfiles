@@ -10,7 +10,7 @@ Icons: Moka [GTK2/3]
 
 Terminal: kitty
 
-For search engine i use my own instance of <a href="https://asciimoo.github.io/searx/">searx</a> hosted on <a href="repl.it/~">repl.it</a>.
+For search engine i use my own instance of <a href="https://asciimoo.github.io/searx/">searx</a> hosted on <a href="https://repl.it/~">repl.it</a>.
 
 link- https://searx.demonkingswarn1.repl.co/
 
