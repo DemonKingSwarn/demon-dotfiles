@@ -8,7 +8,7 @@ Theme: Arc-Dark [GTK2/3]
 
 Icons: Moka [GTK2/3]
 
-Terminal: gnome-terminal
+Terminal: kitty
 
 
 
