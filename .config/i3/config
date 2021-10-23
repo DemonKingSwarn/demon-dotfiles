@@ -37,7 +37,8 @@ set $refresh_i3status killall -SIGUSR1 i3status
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -266,7 +267,8 @@ bindsym $mod+b exec ~/.scripts/bookmarks/bookmarks
  
 # Assign programs to workspaces
 for_window [class="Firefox"] move to workspace $ws1
-for_window [class="Gnome-terminal"] move to workspace $ws2
+#for_window [class="Gnome-terminal"] move to workspace $ws2
+for_window [class="kitty"] move to workspace $ws2
  
 # floating
 for_window [class="Pavucontrol"] floating enable
