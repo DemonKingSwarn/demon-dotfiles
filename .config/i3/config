@@ -101,8 +101,8 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: ✉"
-set $ws2 "2: >_"
+set $ws1 "1: Firefox"
+set $ws2 "2: Terminal"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
@@ -195,6 +195,7 @@ bar {
                 -t iceberg-rainbow \
 
 	position top
+	font pango: iosevka 10
 	colors {
 		background $bg-color
 	    separator #757575
