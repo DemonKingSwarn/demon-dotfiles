@@ -10,6 +10,7 @@ cd ..
 git add .
 git commit -m "autocommit"
 git push
+demonkingswarn
 
 printf "${BLUE}Processed repo: $i ${NC}\n"
 

@@ -7,7 +7,7 @@ target_string=$(cat ~/.scripts/data/translator/languages.txt | dmenu -i -p 'Tran
 
 query=$(dmenu -p "Translate text:") 
 [ -z "$query" ] && exit
-[ "$query" == "cc" ] && query=$(xclip -selection -c -o)
+[ "$query" == "cc" ] && query=$(xclip -selection c -o)
 
 source_lang=$(jq ".$source_string" ~/.scripts/data/translator/languages.json)
 target_lang=$(jq ".$target_string" ~/.scripts/data/translator/languages.json)
