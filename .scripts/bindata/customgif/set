@@ -1,2 +1,0 @@
-#!/bin/sh
-cd ~/Files/GIFs && git add . && git commit -m commit && git push

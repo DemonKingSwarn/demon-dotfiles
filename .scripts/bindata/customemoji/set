@@ -1,3 +1,0 @@
-#!/bin/sh
-cd ~/Files/Emojis && git add . && git commit -m commit && git push
-customemoji setespanso

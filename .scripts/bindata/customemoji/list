@@ -1,2 +1,0 @@
-#!/bin/sh
-ls ~/Files/Emojis/ | sed "s/\.png//g"

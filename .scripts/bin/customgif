@@ -1,4 +1,0 @@
-#!/bin/sh
-
-scriptsdir=~/.scripts/bindata/customgif
-[ -z "$1" ] && "$scriptsdir/run" || "$scriptsdir/$@"
