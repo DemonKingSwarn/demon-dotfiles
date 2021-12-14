@@ -6,6 +6,7 @@ NC='\033[0m'
 printf "${YELLOW}Processing repo: $i ${NC}\n"
 
 cd ..
+cd ..
 git add .
 git commit -m "autocommit"
 git push
