@@ -11,4 +11,4 @@ Icons: Moka [GTK2/3]
 Terminal: kitty
 
 ## ScreenShot:
-![rice_example](https://user-images.githubusercontent.com/69480361/138542966-132b7ebd-2c85-4901-b9b3-30855ffa1cac.jpg)
+![rice_example](https://raw.githubusercontent.com/DemonKingSwarn/demon-dotfiles/main/wallpaper/DemonicRender.png)
