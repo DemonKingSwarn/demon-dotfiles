@@ -40,7 +40,7 @@ services:
         domain:
       # external_port:
     healthcheck:
-      test: wget -nv --tries=1 --spider http://127.0.0.1:10000/api/v1/comments/jNQXAC9IVRw || exit 1
+      test: wget -nv --tries=1 --spider http://127.0.0.1:3000/api/v1/comments/jNQXAC9IVRw || exit 1
       interval: 30s
       timeout: 5s
       retries: 2
