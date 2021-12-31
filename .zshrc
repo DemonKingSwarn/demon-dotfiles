@@ -31,7 +31,7 @@ bindkey "^[[A" up-line-or-beginning-search
 bindkey "^[[B" down-line-or-beginning-search
 
 # History
-HISTFILE=~/dotfiles/.histfile
+HISTFILE=~/.histfile
 HISTSIZE=9999
 SAVEHIST=9999
 # Options
@@ -52,9 +52,9 @@ alias ls="exa --icons --group-directories-first -ah"
 alias cat="bat --theme ansi"
 alias lf='cd $(lfcd)'
 ## Package Management
-alias install="paru -S --noconfirm"
-alias uninstall="paru -R --noconfirm"
-alias update="paru -Syu --noconfirm"
+alias install="apt-fast install -y"
+alias uninstall="apt-fast remove -y"
+alias update="apt-fast update -y"
 ## Utilities
 alias firefresh="mkdir -p /tmp/temp_profile; firefox --profile /tmp/temp_profile; rm -rf /tmp/temp_profile"
 
